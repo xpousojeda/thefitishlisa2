@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | The Fitish Lisa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif&family=Michroma&family=Open+Sans&display=swap" rel="stylesheet" />
+  
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #524fff;
+    color: white;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+  .logo {
+    font-family: 'Ancizar Serif', serif;
+    font-size: 2rem;
+  }
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    color: #ffffff;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Michroma', sans-serif;
+    margin: 0.5rem 0;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav-links a {
+      margin: 0 1rem;
+    }
+  }
+</style>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .content-wrapper {
+      background-color: white;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    h1 {
+      font-family: 'Ancizar Serif', serif;
+      color: #ff29a8;
+      font-size: 4rem;
+    }
+    .subtext {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2rem;
+      color: #524fff;
+      margin-bottom: 2rem;
+    }
+    .blog-post {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .blog-post h2 {
+      font-family: 'Michroma', sans-serif;
+      color: #524fff;
+      margin-bottom: 0.25rem;
+    }
+    .blog-post .date {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 1rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .blog-post p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem;
+      font-size: 0.875rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  
+<div class="navbar">
+  <div class="logo">THE FITISH LISA</div>
+  <div class="hamburger">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="consultation.html">Consultation</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About Us</a>
+  </div>
+</div>
+
+  <div class="content-wrapper">
+    <h1>About Us</h1>
+    <p class="subtext">This is the about page. Share your story and values here.</p>
+    <p>This space is for telling the story behind The Fitish Lisa. You can include your mission, your journey, and anything else that defines who you are and why you started.</p>
+    <footer>
+      <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const container = document.getElementById('blog-container');
+        posts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'blog-post';
+          div.innerHTML = `
+            <h2>${post.title}</h2>
+            <p class="date">${post.date}</p>
+            <p>${post.content}</p>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+  
+<script>
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    const nav = document.querySelector('.nav-links');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Fitish Lisa | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif&family=Michroma&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #524fff;
+      color: white;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Ancizar Serif', serif;
+      font-size: 2rem;
+    }
+
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      display: block;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      color: #FFFFFF;
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: 'Michroma', sans-serif;
+      margin: 0.5rem 0;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .nav-links a {
+        margin: 0 1rem;
+      }
+    }
+
+    .content-wrapper {
+      background-color: white;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    h1.site-title {
+      font-family: 'Ancizar Serif', serif;
+      color: #ff29a8;
+      font-size: 4.5rem;
+    }
+
+    h2, h3, h4, h5 {
+      font-family: 'Michroma', sans-serif;
+      color: #524fff;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    h5 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtext, .subtitle, .confidence-text p {
+      font-family: 'Michroma', sans-serif;
+      color: #ff29a8;
+      font-size: 1rem;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+    }
+
+    .hero-content {
+      flex: 1 1 50%;
+    }
+
+    .hero-image img {
+      width: 300px;
+      border-radius: 50%;
+      border: 5px solid #ff29a8;
+    }
+
+    .confidence {
+      background-color: #524fff;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .confidence-img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .philosophy, .blog-preview, .pricing {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .cta-button, .button-pink {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 1rem;
+    }
+
+    .cta-button {
+      border: 2px solid #524fff;
+      color: #524fff;
+    }
+
+    .button-pink {
+      background-color: white;
+      color: #ff29a8;
+    }
+
+    .consultation {
+      background-color: #524fff;
+      color: #f1f1f1;
+      padding: 4rem 2rem;
+      border-radius: 10px;
+    }
+
+    .consultation-text {
+      overflow: hidden;
+      font-size: 1.25rem;
+      line-height: 1.75;
+    }
+
+    .consultation img {
+      max-width: 250px;
+      float: right;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .consultation img {
+        float: none;
+        display: block;
+        margin: 1.5rem auto;
+      }
+
+      .consultation-text {
+        text-align: center;
+        font-size: 1.1rem;
+      }
+
+      .consultation-text h5 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .fine-print {
+      font-size: 0.75rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.875rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">THE FITISH LISA</div>
+    <div class="hamburger">&#9776;</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="site-title">THE FITISH LISA</h1>
+        <h2>Where positivity and accountability come together to make things happen!</h2>
+        <p class="subtext">
+          Spreading the word that reaching GOALS (not just health and fitness) is not done through executing a perfect plan but through CONSISTENT behaviors.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-photo.png" alt="Lisa stretching in athletic wear" />
+      </div>
+    </header>
+
+    <!-- Confidence Section -->
+    <section class="confidence">
+      <img src="images/confidence-photo.png" alt="Group fitness class in action" class="confidence-img" />
+      <div class="confidence-text">
+        <p>To achieve your goals, you must have the confidence to go after them!</p>
+        <p>The best way to grow confidence is by doing things you never thought you could.</p>
+        <p>After a lifetime of avoiding it, I finally found my confidence through at-home fitness!</p>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy">
+      <h2>My Philosophy</h2>
+      <div class="philosophy-grid">
+        <div class="philosophy-item">
+          <h4>PROCESS FLOW</h4>
+          <p>The life you want doesn’t just happen by accident. Let’s create a plan that you can stick to!</p>
+        </div>
+        <div class="philosophy-item">
+          <h4>GRACE</h4>
+          <p>Life happens! Learning how to give yourself grace is important. That’s what puts the “ish” in Fit-ish.</p>
+        </div>
+        <div class="philosophy-item">
+          <h4>ACCOUNTABILITY</h4>
+          <p>Accountability hurts—but it works. Let TheFitishLisa keep you on track to achieve your goals.</p>
+        </div>
+        <div class="philosophy-item">
+          <h4>ENCOURAGEMENT</h4>
+          <p>Everyone needs someone to believe in them. Everyone needs a personal cheerleader! TheFitishLisa is your someone.</p>
+        </div>
+      </div>
+      <a href="consultation.html" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Consultation Section -->
+    <section class="consultation" id="consultation">
+      <div class="consultation-text">
+        <img src="images/consultation-photo.png" alt="Meditation class with candles" />
+        <h5>Free Consultation</h5>
+        <p>It’s time to get curious! Contact me for a free consultation and find out how my model of being perfectly imperfect will help you live the life you want to live.</p>
+        <a href="contact.html" class="button-pink">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="blog-preview">
+      <h2>Random Thoughts <span class="subtitle">(aka the blog)</span></h2>
+      <p>This is where I get vulnerable—where I share what’s on my mind and help you think through the excuses holding you back.</p>
+      <p>I understand. I’ve been there. I’m still learning, and I’ll be right alongside you through this journey.</p>
+      <a href="blog.html" class="cta-button">Read the Blog</a>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+      <h2><u>Making It Happen!</u></h2>
+      <p>Here at The Fitish Lisa, I believe that consistency is crucial to achieving any goal. Whether it’s health, finances, or life goals—it starts with a positive mindset, a flexible plan, honest accountability, and a little grace.</p>
+      <p>After your free consultation, we’ll meet weekly (Zoom or in-person) to reflect, plan, and build the life you love.</p>
+      <p><strong>$400/month – Three-month commitment required to start the cycle.</strong></p>
+      <p class="fine-print">THE FINE PRINT: If I can’t help, I’ll refer you to someone who can.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      const nav = document.querySelector('.nav-links');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>
