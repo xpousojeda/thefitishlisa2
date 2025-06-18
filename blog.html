@@ -38,8 +38,7 @@
       position: absolute;
       top: 60px;
       right: 20px;
-      background: white;
-      color: #ffffff;
+      background: #524fff;
       padding: 1rem;
       display: none;
       flex-direction: column;
@@ -91,6 +90,7 @@
       color: #ff29a8;
       font-size: 4rem;
       margin-bottom: 0.5rem;
+      text-align: center;
     }
 
     .subtext {
@@ -98,6 +98,7 @@
       font-size: 1.2rem;
       color: #524fff;
       margin-bottom: 2rem;
+      text-align: center;
     }
 
     .blog-post {
@@ -130,6 +131,24 @@
       padding: 2rem;
       font-size: 0.875rem;
       color: #999;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .subtext {
+        font-size: 1rem;
+      }
+
+      .blog-post h2 {
+        font-size: 1.5rem;
+      }
+
+      .blog-post p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
