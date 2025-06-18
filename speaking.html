@@ -114,6 +114,50 @@
       font-size: 0.875rem;
       color: #999;
     }
+
+    /* FLEX BIO LAYOUT */
+    .speaking-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .speaking-text {
+      flex: 1 1 60%;
+    }
+
+    .speaking-photo {
+      flex: 1 1 30%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .speaking-photo img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ff29a8;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .speaking-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .speaking-text {
+        text-align: center;
+      }
+
+      .speaking-photo {
+        margin-top: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -130,29 +174,35 @@
     </div>
   </div>
 
-  <div class="content-wrapper">
-    <h1>Speaking Engagements</h1>
-    <p class="subtext">Inspire, uplift, and create real impact with a message that resonates.</p>
+  <div class="content-wrapper speaking-flex">
+    <div class="speaking-text">
+      <h1>Speaking Engagements</h1>
+      <p class="subtext">Inspire, uplift, and create real impact with a message that resonates.</p>
 
-    <p>
-      Whether it's a keynote, panel, or community event, Lisa brings a unique blend of warmth, humor, and real-world wisdom to every stage. Speaking from experience and the heart, she connects with audiences through authenticity and vulnerability.
-    </p>
-    <p>
-      Topics include overcoming perfectionism, cultivating self-confidence, building healthy routines, and what it really means to live a "fit-ish" life.
-    </p>
-    <p>
-      Lisa has spoken at corporate wellness events, local schools, and fitness communities—and is always open to collaborating with mission-aligned organizations.
-    </p>
-    <p><strong>Want to book Lisa for your next event?</strong></p>
+      <p>
+        Whether it's a keynote, panel, or community event, I bring a unique blend of warmth, humor, and real-world wisdom to every stage. Speaking from experience and the heart, I connect with audiences through authenticity and vulnerability.
+      </p>
+      <p>
+        Topics include overcoming perfectionism, cultivating self-confidence, building healthy routines, and what it really means to live a "fit-ish" life.
+      </p>
+      <p>
+        I've had the honor of speaking at corporate wellness events, local schools, and fitness communities—and I’m always open to collaborating with mission-aligned organizations.
+      </p>
+      <p><strong>Want to book me for your next event?</strong></p>
 
-    <p>
-      Reach out via <a href="mailto:fitishlisa@example.com" style="color:#ff29a8;text-decoration:underline;">email</a> or fill out our interest form <a href="https://calendly.com" target="_blank" style="color:#ff29a8;text-decoration:underline;">here</a>.
-    </p>
+      <p>
+        Reach out via <a href="mailto:fitishlisa@example.com" style="color:#ff29a8;text-decoration:underline;">email</a> or fill out our interest form <a href="https://calendly.com" target="_blank" style="color:#ff29a8;text-decoration:underline;">here</a>.
+      </p>
+    </div>
 
-    <footer>
-      <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
-    </footer>
+    <div class="speaking-photo">
+      <img src="images/speaking-photo.jpg" alt="Lisa speaking at an event">
+    </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
+  </footer>
 
   <script>
     document.querySelector('.hamburger').addEventListener('click', () => {
