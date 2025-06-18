@@ -1,70 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | The Fitish Lisa</title>
+  <title>About Me | The Fitish Lisa</title>
   <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif&family=Michroma&family=Open+Sans&display=swap" rel="stylesheet" />
-  
-<style>
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #524fff;
-    color: white;
-    padding: 1rem 2rem;
-    position: relative;
-  }
-  .logo {
-    font-family: 'Ancizar Serif', serif;
-    font-size: 2rem;
-  }
-  .hamburger {
-    font-size: 2rem;
-    cursor: pointer;
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: white;
-    color: #ffffff;
-    padding: 1rem;
-    display: none;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 10;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Michroma', sans-serif;
-    margin: 0.5rem 0;
-  }
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  @media (min-width: 768px) {
-    .nav-links {
-      display: flex !important;
-      position: static;
-      flex-direction: row;
-      background: none;
-      box-shadow: none;
-      padding: 0;
-    }
-    .hamburger {
-      display: none;
-    }
-    .nav-links a {
-      margin: 0 1rem;
-    }
-  }
-</style>
 
   <style>
     body {
@@ -72,6 +12,61 @@
       padding: 0;
       background-color: #f5f5f5;
       font-family: 'Helvetica Neue', sans-serif;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #524fff;
+      color: white;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+    .logo {
+      font-family: 'Ancizar Serif', serif;
+      font-size: 2rem;
+    }
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      display: block;
+    }
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Michroma', sans-serif;
+      margin: 0.5rem 0;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      .hamburger {
+        display: none;
+      }
+      .nav-links a {
+        margin: 0 1rem;
+      }
     }
     .content-wrapper {
       background-color: white;
@@ -84,6 +79,7 @@
       font-family: 'Ancizar Serif', serif;
       color: #ff29a8;
       font-size: 4rem;
+      margin-bottom: 1rem;
     }
     .subtext {
       font-family: 'Open Sans', sans-serif;
@@ -91,25 +87,11 @@
       color: #524fff;
       margin-bottom: 2rem;
     }
-    .blog-post {
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #ccc;
-    }
-    .blog-post h2 {
-      font-family: 'Michroma', sans-serif;
-      color: #524fff;
-      margin-bottom: 0.25rem;
-    }
-    .blog-post .date {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 1rem;
+    p {
       font-family: 'Open Sans', sans-serif;
-    }
-    .blog-post p {
       font-size: 1.1rem;
       line-height: 1.75;
+      color: #333;
     }
     footer {
       text-align: center;
@@ -121,51 +103,52 @@
   </style>
 </head>
 <body>
-  
-<div class="navbar">
-  <div class="logo">THE FITISH LISA</div>
-  <div class="hamburger">&#9776;</div>
-  <div class="nav-links">
+
+  <div class="navbar">
+    <div class="logo">THE FITISH LISA</div>
+    <div class="hamburger">&#9776;</div>
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="consultation.html">1:1 Coaching</a>
       <a href="speaking.html">Speaking Engagements</a>
       <a href="blog.html">Blog</a>
-      <a href="about.html">About Us</a>
+      <a href="about.html">About Me</a>
+    </div>
   </div>
-</div>
 
   <div class="content-wrapper">
-    <h1>About Us</h1>
-    <p class="subtext">This is the about page. Share your story and values here.</p>
-    <p>This space is for telling the story behind The Fitish Lisa. You can include your mission, your journey, and anything else that defines who you are and why you started.</p>
+    <h1>About Me</h1>
+    <p class="subtext">Hi, I’m Lisa — your friendly CPA-turned-purpose-driven coach.</p>
+
+    <p>
+      For over a decade, I worked in the accounting and finance world—leading teams, improving processes, and navigating the sometimes chaotic waters of numbers and audits. As a Certified Public Accountant, I prided myself on producing results, staying organized, and helping others succeed. But deep down, I always felt there was more to life than spreadsheets and systems.
+    </p>
+
+    <p>
+      I’ve always believed in serving others, whether it was helping my team solve a tricky problem or showing up for friends and family. I learned the power of encouragement, the importance of grace, and the magic of showing up—even on the hard days. Through it all, I discovered that my real passion wasn’t just about finances. It was about helping people create lives they actually want to live.
+    </p>
+
+    <p>
+      That’s where The Fitish Lisa was born. Not out of perfection—but out of realness. Out of learning to balance health, family, work, and purpose with a little flexibility and a lot of intention.
+    </p>
+
+    <p>
+      Today, I combine everything I’ve learned—from accounting to coaching to motherhood—to help others feel empowered, stay accountable, and build lives that *feel* as good on the inside as they look on the outside. Whether I’m speaking to a room full of professionals, leading a coaching session, or writing a blog post, I’m always showing up as myself: imperfect, authentic, and deeply committed to your success.
+    </p>
+
+    <p>Thanks for being here. I’m honored to walk alongside you.</p>
+
     <footer>
       <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
     </footer>
   </div>
+
   <script>
-    fetch('posts.json')
-      .then(res => res.json())
-      .then(posts => {
-        const container = document.getElementById('blog-container');
-        posts.forEach(post => {
-          const div = document.createElement('div');
-          div.className = 'blog-post';
-          div.innerHTML = `
-            <h2>${post.title}</h2>
-            <p class="date">${post.date}</p>
-            <p>${post.content}</p>
-          `;
-          container.appendChild(div);
-        });
-      });
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      const nav = document.querySelector('.nav-links');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
   </script>
-  
-<script>
-  document.querySelector('.hamburger').addEventListener('click', () => {
-    const nav = document.querySelector('.nav-links');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-  });
-</script>
 
 </body>
 </html>
