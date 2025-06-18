@@ -39,7 +39,7 @@
       position: absolute;
       top: 60px;
       right: 20px;
-      background: white;
+      background: #524fff;
       padding: 1rem;
       display: none;
       flex-direction: column;
@@ -115,7 +115,6 @@
       color: #999;
     }
 
-    /* FLEX BIO LAYOUT */
     .speaking-flex {
       display: flex;
       flex-direction: row;
@@ -145,17 +144,29 @@
     }
 
     @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      .subtext {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: center;
+      }
+
       .speaking-flex {
         flex-direction: column;
         align-items: center;
       }
 
-      .speaking-text {
-        text-align: center;
-      }
-
-      .speaking-photo {
-        margin-top: 2rem;
+      .speaking-photo img {
+        width: 250px;
+        height: 250px;
       }
     }
   </style>
