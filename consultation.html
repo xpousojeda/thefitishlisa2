@@ -114,6 +114,50 @@
       font-size: 0.875rem;
       color: #999;
     }
+
+    /* FLEX LAYOUT FOR IMAGE + TEXT */
+    .coaching-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .coaching-text {
+      flex: 1 1 60%;
+    }
+
+    .coaching-photo {
+      flex: 1 1 30%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .coaching-photo img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ff29a8;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .coaching-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .coaching-text {
+        text-align: center;
+      }
+
+      .coaching-photo {
+        margin-top: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -130,29 +174,35 @@
     </div>
   </div>
 
-  <div class="content-wrapper">
-    <h1>1 : 1 Coaching</h1>
-    <p class="subtext">Let’s take a real, supportive step toward building a life that *feels* as good as it looks.</p>
+  <div class="content-wrapper coaching-flex">
+    <div class="coaching-text">
+      <h1>1:1 Coaching</h1>
+      <p class="subtext">Let’s take a real, supportive step toward building a life that <em>feels</em> as good as it looks.</p>
 
-    <p>
-      Your journey begins with one decision—to show up for yourself. Through personalized coaching, we’ll focus on progress over perfection and build routines that stick.
-    </p>
-    <p>
-      I offer a complimentary discovery call where we’ll get to know each other and see if we’re a good fit. No pressure—just a chat about what you’re looking to shift in your life.
-    </p>
-    <p>
-      From there, we’ll commit to weekly sessions (via Zoom or in-person) and begin working toward your goals with positivity, accountability, and plenty of grace.
-    </p>
-    <p><strong>$400/month – 3-month minimum commitment</strong></p>
+      <p>
+        Your journey begins with one decision—to show up for yourself. Through personalized coaching, we’ll focus on progress over perfection and build routines that stick.
+      </p>
+      <p>
+        I offer a complimentary discovery call where we’ll get to know each other and see if we’re a good fit. No pressure—just a chat about what you’re looking to shift in your life.
+      </p>
+      <p>
+        From there, we’ll commit to weekly sessions (via Zoom or in-person) and begin working toward your goals with positivity, accountability, and plenty of grace.
+      </p>
+      <p><strong>$400/month – 3-month minimum commitment</strong></p>
 
-    <p>
-      Ready to start? <a href="mailto:fitishlisa@example.com" style="color:#ff29a8;text-decoration:underline;">Email me now</a> or <a href="https://calendly.com" target="_blank" style="color:#ff29a8;text-decoration:underline;">book a time here</a>.
-    </p>
+      <p>
+        Ready to start? <a href="mailto:fitishlisa@example.com" style="color:#ff29a8;text-decoration:underline;">Email me now</a> or <a href="https://calendly.com" target="_blank" style="color:#ff29a8;text-decoration:underline;">book a time here</a>.
+      </p>
+    </div>
 
-    <footer>
-      <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
-    </footer>
+    <div class="coaching-photo">
+      <img src="images/lisa-coaching.jpg" alt="Lisa coaching one-on-one">
+    </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 The Fitish Lisa. All rights reserved.</p>
+  </footer>
 
   <script>
     document.querySelector('.hamburger').addEventListener('click', () => {
@@ -163,4 +213,3 @@
 
 </body>
 </html>
- 
